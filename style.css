@@ -11,12 +11,18 @@
     background-image: url("header.png");
     background-position: center;
     background-size: cover;
+    position: relative;
+}
+
+.sp-menu{
+    display: none;
 }
 
 nav {
     width: 100%;
     padding: 20px 0;
     text-align: center; /* 子要素を中央に */
+    /* transition: 3s; */
 }
 
 .logo {
@@ -31,6 +37,7 @@ nav ul {
     list-style: none;
     opacity: .8;
     width: 100%;
+    transition:all 3s;
 }
 
 nav ul li {
@@ -73,6 +80,7 @@ nav.sticky{
     transition: 0.5s;
     opacity: .8;
     border-radius: 25%;
+    z-index: 999;
 }
 
 nav.sticky ul{
@@ -80,6 +88,183 @@ nav.sticky ul{
     font-size: 1.3rem;
 }
 
+.overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: aliceblue;
+    /* display: flex; */
+    /* text-align: center; */
+    opacity: 0;
+    pointer-events: none;
+    transition: 1s;
+}
+
+.overlay ul{
+    margin: 10vh auto;
+    line-height: 10vh;
+    width: 50vh;
+    text-align: center;
+}
+
+.overlay ul li{
+    border-bottom: solid;
+    border-top: solid;
+    list-style: none;
+}
+
+.overlay ul li a{
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: black;
+    transform: translateY(10px);
+    /* transition: 2s; */
+    transition: 1s;
+}
+
+.overlay ul li a:hover{
+    color: rgb(0, 214, 143);
+}
+
+#first{
+    border-top: solid 4px;
+}
+
+#last{
+    border-bottom: solid 4px;
+}
+
+.overlay #close{
+    position: absolute;
+    top: 5vh;
+    right: 2vw;
+    font-size: 2.5rem;
+    cursor: pointer;
+}
+
+.overlay.show{
+    opacity: 1;
+    pointer-events:auto ;
+}
+
+@media (max-width:600px){
+    nav{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: aliceblue;
+        transition: 1s;
+        border-radius: 25%;
+        opacity: .8;
+    }
+
+    nav .logo{
+        margin-left: 2vw;
+    }
+
+    nav .sp-menu{
+        display: flex;
+        cursor: pointer;
+    }
+
+    nav .sp-menu span{
+        font-size: 2.5rem;
+        transition: 1s;
+        margin-right: 2vw;
+        cursor: pointer;
+    }
+
+    nav ul li {
+        display: none;
+    }
+}
+
 .main{
     padding: 50px;
 }
+
+/* @keyframes animation-2 {
+    0% {
+      clip-path: circle(0 at 50% 50%);
+      -webkit-clip-path: circle(0 at 50% 50%);
+    }
+
+    100% {
+      clip-path: circle(100% at 50% 50%);
+      -webkit-clip-path: circle(100% at 50% 50%);
+    }
+  } */
+
+.sec1{
+    display: flex;
+    width: 100%;
+}
+
+.sec1 img{
+    width: 30vw;
+    box-shadow: 2px 2px 3px 2px rgb(103, 103, 103);
+    z-index: -1;
+    /* animation: animation-2 5s cubic-bezier(0.4, 0, 0.2, 1); */
+}
+
+.sec1 h2{
+    text-align: center;
+}
+
+.sec1 p{
+    margin-top: 5vh;
+    margin-left: 2vw;
+}
+
+.sec2{
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: 10vh;
+}
+
+.sec2 img{
+    width: 30vw;
+    box-shadow: 2px 2px 3px 2px rgb(103, 103, 103);
+    /* animation: animation-2 5s cubic-bezier(0.4, 0, 0.2, 1); */
+}
+
+.sec2 h2{
+    text-align: center;
+}
+
+.sec2 p{
+    margin-top: 5vh;
+    margin-right: 2vw;
+}
+
+@media (max-width:428px){
+    .sec1{
+        display: block;
+        margin-top: 10vh;
+    }
+
+    .sec1 img{
+        width: 100%;
+        /* animation: animation-2 5s cubic-bezier(0.4, 0, 0.2, 1); */
+    }
+
+    .sec1 h2{
+        margin-top: 5vh;
+    }
+
+    .sec2{
+        display: block;
+        margin-top: 10vh;
+    }
+
+    .sec2 img{
+        width: 100%;
+    }
+
+    .sec2 h2{
+        margin-top: 5vh;
+    }
+}
+
