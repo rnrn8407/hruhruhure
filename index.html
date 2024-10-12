@@ -4,24 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="header">
         <nav class="nav">
             <h2 class="logo">Sample</h2>
-            <ul class="header-list">
-                <li><a href="#">会社概要</a></li>
-                <li><a href="#">サービス</a></li>
-                <li><a href="#">サイト</a></li>
-                <li><a href="https://rnrn8407.github.io/Sample_Contactform_Easily/">お問い合わせ</a></li>
-            </ul>
+            <div class="sp-menu">
+                <span class="material-icons" id="open">menu</span>
+            </div>
+            <div class="pc-menu">
+                <ul class="header-list">
+                    <li><a href="#">会社概要</a></li>
+                    <li><a href="#">サービス</a></li>
+                    <li><a href="#">サイト</a></li>
+                    <li><a href="https://rnrn8407.github.io/Sample_Contactform_Easily/">お問い合わせ</a></li>
+                </ul>
+            </div>
         </nav>
     </div>
 
+    <div class="overlay">
+        <ul>
+            <li id="first"><a href="#">会社概要</a></li>
+            <li><a href="#">サービス</a></li>
+            <li><a href="#">サイト</a></li>
+            <li id="last"><a href="https://rnrn8407.github.io/Sample_Contactform_Easily/">お問い合わせ</a></li>
+        </ul>
+        <span class="material-icons" id="close">close</span>
+    </div>
+
     <div class="main">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam minima facilis eligendi inventore, nesciunt laboriosam repellendus voluptates! Eaque cumque quasi officiis cum aliquid molestiae! Magni hic ea deserunt amet id eaque esse magnam quam voluptates et nihil, aut ut laudantium odit unde recusandae quisquam a ducimus sunt! Qui maxime illum provident. Ducimus sunt, eos dolores consectetur repellat nobis nesciunt sequi, fugiat odio accusamus pariatur. Optio aliquam voluptatibus tempore dicta eveniet dolorum similique deleniti ad iusto expedita et aliquid illum minima modi, asperiores eius dignissimos natus in, aut, dolorem sequi? Reprehenderit ipsa voluptatem libero numquam. Quia quos corrupti eos labore minima praesentium? Quibusdam minus quaerat reiciendis praesentium modi sapiente, perferendis nam autem non! Sunt quas doloremque asperiores cum neque! Similique recusandae tempore fuga perspiciatis ratione aliquid, architecto nostrum! Eaque tempore mollitia commodi culpa. Dolorum quis sed eveniet officiis earum iure ipsa doloremque perspiciatis explicabo consequuntur modi tenetur, saepe dicta sit. Facere amet officiis sunt maxime, magnam vel voluptas nemo eligendi consectetur. Esse recusandae ipsam, aliquam voluptatum dicta assumenda, aspernatur delectus similique qui inventore, suscipit blanditiis quisquam cumque. Ipsum vel quam at magni quidem aperiam? Nemo eaque quos ut voluptatem rem, sapiente maiores reiciendis praesentium culpa ex accusantium rerum vitae tenetur a!
+       <section class="sec1">
+            <img src="section1.png" alt="" id="img2" data-aos="zoom-in" data-aos-duration="1500" data-aos-offset="20">
+            <article>
+                <h2>title2</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo velit sed error unde, nisi neque itaque ullam exercitationem vitae, porro quod corrupti distinctio. Atque facere veniam debitis cumque eveniet tempora! Explicabo et ex odio velit voluptatem aut beatae, hic id odit necessitatibus recusandae, corrupti quaerat blanditiis laboriosam deleniti nesciunt laudantium!</p>
+            </article>
+       </section>
+
+       <section class="sec2">
+        <img src="section2.png" alt="" data-aos="fade-in" data-aos-duration="1500" data-aos-offset="20">
+        <article>
+            <h2>title2</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo velit sed error unde, nisi neque itaque ullam exercitationem vitae, porro quod corrupti distinctio. Atque facere veniam debitis cumque eveniet tempora! Explicabo et ex odio velit voluptatem aut beatae, hic id odit necessitatibus recusandae, corrupti quaerat blanditiis laboriosam deleniti nesciunt laudantium!</p>
+        </article>
+   </section>
+
     </div>
     <script src="header.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 </html>
